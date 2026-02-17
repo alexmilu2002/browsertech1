@@ -11,13 +11,10 @@
 
 <body>
     <header>
-        <h1>Browser Tech</h1>
+        <h1>Aangifte 2025 Erfbelasting</h1>
     </header>
 
     <main>
-        <h2>Aangifte 2025
-            Erfbelasting </h2>
-
 
         <form>
             <fieldset>
@@ -39,24 +36,73 @@
             </fieldset>
 
             <fieldset>
-                <legend>Was de overledene getrouwd of had de overledene een
-                    geregistreerde partner op het moment van overlijden?</legend>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="yes" /> Ja</label>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="no" /> Nee</label>
-            </fieldset>
-
-            <fieldset>
-                <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="yes" /> Ja</label>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="no" /> Nee</label>
+                <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
+                <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_no" value="no" /> Nee</label>
             </fieldset>
 
             <fieldset>
                 <legend>Hadden de overledene en diens echtgenoot of
                     geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="yes" /> Ja</label>
-                <label><input type="radio" name="deceasedmarried" id="deceasedmarried" value="no" /> Nee</label>
+                <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" id="has_prenuptial_or_partnership_agreement_notarized_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" id="has_prenuptial_or_partnership_agreement_notarized_no" value="no" /> Nee</label>
             </fieldset>
+
+            <fieldset>
+                <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                <label><input type="radio" name="final_settlement_clause" id="has_final_settlement_clause_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="final_settlement_clause" id="has_final_settlement_clause_no" value="no" /> Nee</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vul hier de gegevens in van de overledene.</legend>
+                <label for="prenuptial_or_partnership_agreement_date">Datum huwelijkse of partnerschapsvoorwaarden: </label>
+                <input type="date" name="prenuptial_or_partnership_agreement_date" id="prenuptial_or_partnership_agreement_date" required />
+            </fieldset>
+
+            <fieldset>
+                <legend>Had de overledene kinderen?</legend>
+                <label><input type="radio" name="children" id="has_children" value="yes" /> Ja</label>
+                <label><input type="radio" name="children" id="has_no_children" value="no" /> Nee</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
+                <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_no" value="no" /> Nee</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Had dit overleden kind zelf kinderen?</legend>
+                <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_no" value="no" /> Nee</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Had de overledene een testament?</legend>
+                <label><input type="radio" name="has_will" id="has_will_yes" value="yes" /> Ja</label>
+                <label><input type="radio" name="has_will" id="has_will_no" value="no" /> Nee</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Vul de gegevens in van de notaris die het testament heeft opgemaakt.</legend>
+                <label for="notary_protocol_number">Protocolnummer notaris: </label>
+                <input type="text" name="notary_protocol_number" id="notary_protocol_number" required />
+
+                <label for="notary_full_name">Voorletter(s), tussenvoegsel(s) en achternaam: </label>
+                <input type="text" name="notary_full_name" id="notary_full_name" required />
+
+                <label for="notary_place_of_business">Vestigingsplaats: </label>
+                <input type="text" name="notary_place_of_business" id="notary_place_of_business" required />
+
+                <label for="will_or_last_amendment_date">Datum van het testament of van de laatste wijziging: </label>
+                <input type="date" name="will_or_last_amendment_date" id="will_or_last_amendment_date" required />
+
+                <label for="bsn_deceased">Vul hier de BSN van de overledene in : </label>
+                <input type="text" name="bsn_deceased" id="bsn_deceased" required />
+            </fieldset>
+
+
         </form>
     </main>
 

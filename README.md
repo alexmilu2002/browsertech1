@@ -1,9 +1,13 @@
-Dag 1 (16/02/2025)
+<h1>Dag 1 (16/02/2025)</h1>
 
-Wat heb ik gedaan vandaag?
+<h2>Wat heb ik gedaan vandaag?</h2>
+<p> </p>
 
-Hoelang heb ik eraan gewerkt?
+<h2>Hoelang heb ik eraan gewerkt?</h2>
+<p> </p>
 
-Wat heb ik geleerd?
+<h2>Wat heb ik geleerd?<h2>
+<p> </p>
 
-Wat ga ik morgen doen?
+<h2>Wat ga ik morgen doen?</h2>
+<p> </p>
