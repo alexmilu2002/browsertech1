@@ -26,7 +26,7 @@
                     <input type="text" name="initial_deceased" id="initial_deceased" required>
 
                     <label for="infix_deceased">Tussen-voegsel(s): </label>
-                    <input type="text" name="infix_deceased" id="infix_deceased" required>
+                    <input type="text" name="infix_deceased" id="infix_deceased">
 
                     <label for="lname_deceased">Achternaam: </label>
                     <input type="text" name="lname_deceased" id="lname_deceased" required>
@@ -40,55 +40,71 @@
 
                 <fieldset>
                     <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                    <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_no" value="no"> Nee</label>
+                    <label>
+                        <input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_yes" value="yes" checked> Ja
+                    </label>
+                    <label>
+                        <input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_no" value="no"> Nee
+                    </label>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Hadden de overledene en diens echtgenoot of
-                        geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
-                    <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" id="has_prenuptial_or_partnership_agreement_notarized_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" id="has_prenuptial_or_partnership_agreement_notarized_no" value="no"> Nee</label>
-                </fieldset>
+                <div id="partner_questions">
 
-                <fieldset>
-                    <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                    <label><input type="radio" name="final_settlement_clause" id="has_final_settlement_clause_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="final_settlement_clause" id="has_final_settlement_clause_no" value="no"> Nee</label>
-                </fieldset>
+                    <fieldset>
+                        <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
+                        <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" value="yes"> Ja</label>
+                        <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" value="no"> Nee</label>
+                    </fieldset>
 
-                <fieldset>
-                    <legend>Vul hier de gegevens in van de overledene.</legend>
-                    <label for="prenuptial_or_partnership_agreement_date">Datum huwelijkse of partnerschapsvoorwaarden: </label>
-                    <input type="date" name="prenuptial_or_partnership_agreement_date" id="prenuptial_or_partnership_agreement_date" required>
-                </fieldset>
+                    <fieldset>
+                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        <label><input type="radio" name="final_settlement_clause" value="yes"> Ja</label>
+                        <label><input type="radio" name="final_settlement_clause" value="no"> Nee</label>
+                    </fieldset>
 
+                    <fieldset>
+                        <legend>Vul hier de gegevens in van de overledene.</legend>
+                        <label for="prenuptial_or_partnership_agreement_date">
+                            Datum huwelijkse of partnerschapsvoorwaarden:
+                        </label>
+                        <input type="date" name="prenuptial_or_partnership_agreement_date" id="prenuptial_or_partnership_agreement_date">
+                    </fieldset>
+
+                </div>
+                
                 <fieldset>
                     <legend>Had de overledene kinderen?</legend>
-                    <label><input type="radio" name="children" id="has_children" value="yes"> Ja</label>
-                    <label><input type="radio" name="children" id="has_no_children" value="no"> Nee</label>
+                    <label><input type="radio" name="children" id="has_children_yes" value="yes" checked> Ja</label>
+                    <label><input type="radio" name="children" id="has_children_no" value="no"> Nee</label>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                    <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_no" value="no"> Nee</label>
-                </fieldset>
+                <div id="children_related_questions">
 
-                <fieldset>
-                    <legend>Had dit overleden kind zelf kinderen?</legend>
-                    <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_no" value="no"> Nee</label>
-                </fieldset>
+                    <fieldset>
+                        <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
+                        <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_yes" value="yes"> Ja</label>
+                        <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_no" value="no"> Nee</label>
+                    </fieldset>
 
-                <fieldset>
-                    <legend>Had de overledene een testament?</legend>
-                    <label><input type="radio" name="has_will" id="has_will_yes" value="yes"> Ja</label>
-                    <label><input type="radio" name="has_will" id="has_will_no" value="no"> Nee</label>
-                </fieldset>
+                    <fieldset>
+                        <legend>Had dit overleden kind zelf kinderen?</legend>
+                        <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_yes" value="yes"> Ja</label>
+                        <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_no" value="no"> Nee</label>
+                    </fieldset>
+
+                </div>
+
+            <fieldset>
+                <legend>Had de overledene een testament?</legend>
+                <label><input type="radio" name="has_will" id="has_will_yes" value="yes" checked> Ja</label>
+                <label><input type="radio" name="has_will" id="has_will_no" value="no"> Nee</label>
+            </fieldset>
+
+            <div id="will_details_section">
 
                 <fieldset>
                     <legend>Vul de gegevens in van de notaris die het testament heeft opgemaakt.</legend>
+
                     <label for="notary_protocol_number">Protocolnummer notaris: </label>
                     <input type="text" name="notary_protocol_number" id="notary_protocol_number" required>
 
@@ -101,9 +117,12 @@
                     <label for="will_or_last_amendment_date">Datum van het testament of van de laatste wijziging: </label>
                     <input type="date" name="will_or_last_amendment_date" id="will_or_last_amendment_date" required>
 
-                    <label for="bsn_deceased2">Vul hier de BSN van de overledene in : </label>
+                    <label for="bsn_deceased2">Vul hier de BSN van de overledene in :</label>
                     <input type="text" name="bsn_deceased2" id="bsn_deceased2" required>
+
                 </fieldset>
+
+            </div>
 
             </fieldset>
 
@@ -111,7 +130,7 @@
             <fieldset>
                 <legend class="firstlegend">Vul hier de gegevens van de Gemachtigde in</legend>
                 <fieldset>
-                    <legend>Kies 1 van de 3 Identificatienummers?</legend>
+                    <legend>Kies 1 van de 3 Identificatienummers</legend>
                     <label><input type="radio" name="representative_choice" id="choice1" value="1"> BSN/RSIN Nummer</label>
                     <label><input type="radio" name="representative_choice" id="choice2" value="2"> Beconnummer Adviseur</label>
                     <label><input type="radio" name="representative_choice" id="choice3" value="3"> Protocolnummer Notaris</label>
@@ -143,17 +162,17 @@
                     <label for="representative_phone_number">Telefoonnummer Gemachtigde: </label>
                     <input type="text" name="representative_phone_number" id="representative_phone_number" required>
                     
-                    <label for="representative_email_address">E-Mail adres Gemachtigde: </label>
+                    <label for="representative_email_address">E-Mail Adres Gemachtigde: </label>
                     <input type="text" name="representative_email_address" id="representative_email_address" required>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Is de Gemachtigde Gevestigd in Nederland?</legend>
-                    <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_yes" value="yes"> Ja </label>
+                    <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_yes" value="yes" checked> Ja </label>
                     <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_no" value="no"> Nee</label>
                 </fieldset>
 
-                <fieldset id="nl_fields" style="display:none;">
+                <fieldset id="nl_fields" style="display:block;">
                     <legend>Adres in Nederland.</legend>
                     <label for="representative_address_nl">Straat, huisnummer en toevoeging: </label>
                     <input type="text" name="representative_address_nl" id="representative_address_nl">
@@ -172,11 +191,12 @@
 
                     <label for="representative_country_code">Landcode: </label>
                     <input type="text" name="representative_country_code" id="countryInput">
-                    <datalist id="countries" ></datalist>
 
                 </fieldset>
 
             </fieldset>
+
+            <button>Verstuur Formulier</button>
 
         </form>
     </main>

@@ -63,3 +63,22 @@
 
 <h2>Wat ga ik morgen doen?</h2>
 <p></p>
+
+<h1>Dag 5 (09/03/2025) Maandag</h1>
+
+<h2>Wat heb ik gedaan vandaag?</h2>
+<p>Vandaag begon de dag met een lezing van Rijk van Zanten. hij is de co-founder en CTO van directus. Ik vond zijn verhaaltje over hoe het allemaal begon heel leuk om te horen, en het heeft me een klein besef momentje gegeven van hoe snel het eigenlijk kan gaan. Daarna heb ik een Workshop gevolgd van Vasilis. De Workshop ging over validatie, ik heb me hiervoor aangemeld omdat ik nog een paar vraagjes had hierover. Verder ben ik bezig gegaan met mijn eigen formulier. Ik ben verder gegaan met de vormgeving en styling, zo heb ik een button toegevoegd, en heb ik de H1 en P eenbeetje aangepast. Daarna ben ik bezig geweest met mijn laatste pattroon. Als je vraag zoals "Heeft de overledene kinderen" beantwoord met "Nee" skipt hij een aantal vragen. Ook heb ik die vragen standaard met "Ja" ingevuld zodat de vragen altijd zichtbaar zijn. Ik heb gekeken naar welke fields allemaal required moeten zijn, en welke niet. Ten slotte heb ik een begin gemaakt aan de validity. Ik heb in css focus states gemaakt, en die werken nu wel goed. Alleen wil ik dat morgen meer aanscherpen, ik vond het te lastig om vandaag no af te krijgen.</p>
+
+<h2>Hoelang heb ik eraan gewerkt?</h2>
+<p>Lezing: 1 uur</p>
+<p>Workshop: 1 uur</p>
+<p>Vormgeving: 1 uur</p>
+<p>Pattern: 2 uur</p>
+<p>Validity: 1 uur</p>
+
+
+<h2>Wat heb ik geleerd?<h2>
+<p>Valid werkt ook met fieldset, en ook met de hele formulier. Dit kun je ook mooi en duidelijk vormgeven. Je kan beter positieve feedback geven dan alleen negatieve (Dictatoriaal). Je kan een radiobullet required maken door op 1 van de 2 inputs required te zetten. Je kan met javascript de pop-up melding van de validation veranderen, door een customValidity te geven. Die kan je ook weghalen, en zelf een validiteitcheck te doen met HTML en CSS. BLUR zorgt ervoor dat de error tekst wordt getoond als je uit het vakje gaat, ipv meteen. Net als userinvalid of uservalid</p>
+
+<h2>Wat ga ik morgen doen?</h2>
+<p>Morgen wil ik de achterstand van mijn Read-Me inhalen en verder met de Validity. Hierbij wil ik Vasilis nog een aantal vragen over stellen, want ik vind het wel lastig worden.</p>

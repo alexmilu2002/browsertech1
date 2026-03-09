@@ -1,4 +1,66 @@
-// document.querySelector("input").setAttribute("required", "");
+
+const marriedYesRadio = document.getElementById('married_or_registered_partner_yes');
+const marriedNoRadio = document.getElementById('married_or_registered_partner_no');
+const partnerRelatedQuestions = document.getElementById('partner_questions');
+
+function togglePartnerQuestions() {
+    if (marriedNoRadio.checked) {
+        partnerRelatedQuestions.style.display = "none";
+    } else {
+        partnerRelatedQuestions.style.display = "block";
+    }
+}
+
+marriedYesRadio.addEventListener("change", togglePartnerQuestions);
+marriedNoRadio.addEventListener("change", togglePartnerQuestions);
+
+const hasChildrenYesRadio = document.getElementById('has_children_yes');
+const hasChildrenNoRadio = document.getElementById('has_children_no');
+const childrenRelatedQuestions = document.getElementById('children_related_questions');
+
+function toggleChildrenQuestions() {
+    if (hasChildrenNoRadio.checked) {
+        childrenRelatedQuestions.style.display = "none";
+    } else {
+        childrenRelatedQuestions.style.display = "block";
+    }
+}
+
+hasChildrenYesRadio.addEventListener("change", toggleChildrenQuestions);
+hasChildrenNoRadio.addEventListener("change", toggleChildrenQuestions);
+
+const hasWillYesRadio = document.getElementById('has_will_yes');
+const hasWillNoRadio = document.getElementById('has_will_no');
+const willDetailsSection = document.getElementById('will_details_section');
+
+function toggleWillDetails() {
+    if (hasWillNoRadio.checked) {
+        willDetailsSection.style.display = "none";
+    } else {
+        willDetailsSection.style.display = "block";
+    }
+}
+
+hasWillYesRadio.addEventListener("change", toggleWillDetails);
+hasWillNoRadio.addEventListener("change", toggleWillDetails);
+
+const representativeCountryYes = document.getElementById('representative_is_established_in_netherlands_yes');
+const representativeCountryNo = document.getElementById('representative_is_established_in_netherlands_no');
+
+const nlFields = document.getElementById('nl_fields');
+const foreignFields = document.getElementById('foreign_fields');
+
+function toggleRepresentativeFields() {
+    if (representativeCountryYes.checked) {
+        nlFields.style.display = "block";
+        foreignFields.style.display = "none";
+    } else if (representativeCountryNo.checked) {
+        nlFields.style.display = "none";
+        foreignFields.style.display = "block";
+    }
+}
+representativeCountryYes.addEventListener("change", toggleRepresentativeFields);
+representativeCountryNo.addEventListener("change", toggleRepresentativeFields);
 
 
 let identificatienummerc1 = document.getElementById("choice1");
@@ -27,23 +89,7 @@ identificatienummerc3.onclick = function() {
     notary.style.display = "block";
 };
 
-let nlyes = document.getElementById("representative_is_established_in_netherlands_yes");
-let nlno  = document.getElementById("representative_is_established_in_netherlands_no");
-
-let nl = document.getElementById("nl_fields");
-let foreign = document.getElementById("foreign_fields");
-
-nlyes.onclick = function () {
-  nl.style.display = "block";
-  foreign.style.display = "none";
-};
-
-nlno.onclick = function () {
-  nl.style.display = "none";
-  foreign.style.display = "block";
-};
-
-
+// MARK: LANDCODE CODE
 
 const countries = [
   { code: "AFG", name: "Afghanistan" },
@@ -217,3 +263,4 @@ input.addEventListener("change", function () {
     input.value = map[input.value];
   }
 });
+
