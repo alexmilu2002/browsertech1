@@ -7,7 +7,6 @@
     --border-light: #d2d2d7;
 }
 
-/* Body en layout */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -15,7 +14,6 @@ body {
     color: var(--primary-text-color);
 }
 
-/* Header */
 header {
     background-color: var(--secondary-background-color);
     width: 100%;
@@ -56,6 +54,7 @@ fieldset {
 fieldset fieldset {
     background-color: #f8f9fb;
     padding: 1.5em 2em;
+    
 }
 
 /* Legend styling */
@@ -84,11 +83,12 @@ legend {
     padding: 0.5em 0.85em;
 }
 
-/* Form inputs */
+/* Form inputs en Validity*/
 input[type="text"],
 input[type="date"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="number"] {
     display: block;
     width: 100%;
     padding: 0.75em;
@@ -103,7 +103,8 @@ input[type="tel"] {
 input[type="text"]:focus,
 input[type="date"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus {
+input[type="tel"]:focus,
+input[type="number"]:focus {
     outline: none;
     border: 2px solid var(--secondary-background-color);
 }
@@ -111,20 +112,30 @@ input[type="tel"]:focus {
 input[type="text"]:user-valid:focus,
 input[type="date"]:user-valid:focus,
 input[type="email"]:user-valid:focus,
-input[type="tel"]:user-valid:focus {
+input[type="tel"]:user-valid:focus,
+input[type="number"]:user-valid:focus {
     outline: none;
     border: 2px solid green;
 }
 
-input[type="text"]:user-invalid:focus,
-input[type="date"]:user-invalid:focus,
-input[type="email"]:user-invalid:focus,
-input[type="tel"]:user-invalid:focus {
-    outline: none;
-    border: 2px solid red;
+input.invalid {
+  border: 2px solid red;
+  background-color: lightcoral;
 }
 
+span.error {
+  color: red;
+  font-size: 0.9em;
+  visibility: hidden;     /* Verberg standaard */
+  display: block;         /* Zorg dat het op een nieuwe regel staat */
+  margin-top: -1em;
+  margin-bottom: 1em;
 
+}
+
+span.error.active {
+  visibility: visible;
+}
 
 /* Radio buttons als knoppen */
 input[type="radio"] {
@@ -153,7 +164,7 @@ label:has(input[type="radio"]:checked) {
     border-color: var(--button-color);
 }
 
-/* Buttons */
+/* Verzend Button */
 button {
     display: block;
     width: 90%;
@@ -168,3 +179,50 @@ button {
     font-size: 1.48rem;
 }
 
+/* MARK: Pattern 1: Openen en Dicht doen van Velden */
+#partner_questions,
+#children_related_questions,
+#will_details_section {
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+form:has(#married_or_registered_partner_no:checked) #partner_questions {
+    max-height: 0;
+    opacity: 0;
+}
+form:has(#has_children_no:checked) #children_related_questions {
+    max-height: 0;
+    opacity: 0;
+}
+form:has(#has_will_no:checked) #will_details_section {
+    max-height: 0;
+    opacity: 0;
+}
+
+#bsn_field,
+#becon_field,
+#notary_field,
+#foreign_fields,
+#nl_fields {
+    display: none;
+}
+form:has(#choice1:checked) #bsn_field {
+    display: block;
+}
+form:has(#choice2:checked) #becon_field {
+    display: block;
+}
+
+form:has(#choice3:checked) #notary_field {
+    display: block;
+}
+
+form:has(#representative_is_established_in_netherlands_no:checked) #foreign_fields {
+    display: block;
+}
+
+form:has(#representative_is_established_in_netherlands_yes:checked) #nl_fields {
+    display: block;
+}

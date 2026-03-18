@@ -1,96 +1,143 @@
+// MARK: Validity
+const form = document.querySelector("form");
 
-const marriedYesRadio = document.getElementById('married_or_registered_partner_yes');
-const marriedNoRadio = document.getElementById('married_or_registered_partner_no');
-const partnerRelatedQuestions = document.getElementById('partner_questions');
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-function togglePartnerQuestions() {
-    if (marriedNoRadio.checked) {
-        partnerRelatedQuestions.style.display = "none";
+  const fields = form.querySelectorAll("input");
+  let formValid = true;
+
+  fields.forEach((field) => {
+    if (field.disabled) return;
+
+    const error = field.nextElementSibling;
+
+    if (!error || !error.classList.contains("error")) return;
+
+    if (!field.checkValidity()) {
+
+      formValid = false;
+
+      if (field.validity.valueMissing) {
+        error.textContent = "Dit veld is verplicht.";
+      } else if (field.validity.typeMismatch) {
+        error.textContent = "Ongeldig formaat.";
+      } else if (field.validity.patternMismatch) {
+        error.textContent = "Ongeldige invoer.";
+      }
+
+      error.classList.add("active");
+      field.classList.add("invalid");
+
     } else {
-        partnerRelatedQuestions.style.display = "block";
+      resetField(field);
     }
+
+  });
+
+  if (formValid) {
+    form.submit();
+  }
+});
+
+function resetField(field) {
+  field.classList.remove("invalid");
+
+  const error = field.nextElementSibling;
+  if (error && error.classList.contains("error")) {
+    error.textContent = "";
+    error.classList.remove("active");
+  }
 }
 
-marriedYesRadio.addEventListener("change", togglePartnerQuestions);
-marriedNoRadio.addEventListener("change", togglePartnerQuestions);
+// Bij dichtklappen van velden verdwijnt de error
 
-const hasChildrenYesRadio = document.getElementById('has_children_yes');
-const hasChildrenNoRadio = document.getElementById('has_children_no');
-const childrenRelatedQuestions = document.getElementById('children_related_questions');
+function toggleSection(container, isActive) {
 
-function toggleChildrenQuestions() {
-    if (hasChildrenNoRadio.checked) {
-        childrenRelatedQuestions.style.display = "none";
-    } else {
-        childrenRelatedQuestions.style.display = "block";
-    }
+  const inputs = container.querySelectorAll("input");
+
+  inputs.forEach((input) => {
+
+    input.required = isActive;
+    input.disabled = !isActive;
+
+    resetField(input);
+
+  });
+
 }
 
-hasChildrenYesRadio.addEventListener("change", toggleChildrenQuestions);
-hasChildrenNoRadio.addEventListener("change", toggleChildrenQuestions);
+const partnerSection = document.getElementById("partner_questions");
 
-const hasWillYesRadio = document.getElementById('has_will_yes');
-const hasWillNoRadio = document.getElementById('has_will_no');
-const willDetailsSection = document.getElementById('will_details_section');
+document.getElementById("married_or_registered_partner_yes")
+  .addEventListener("change", () => toggleSection(partnerSection, true));
 
-function toggleWillDetails() {
-    if (hasWillNoRadio.checked) {
-        willDetailsSection.style.display = "none";
-    } else {
-        willDetailsSection.style.display = "block";
-    }
-}
+document.getElementById("married_or_registered_partner_no")
+  .addEventListener("change", () => toggleSection(partnerSection, false));
 
-hasWillYesRadio.addEventListener("change", toggleWillDetails);
-hasWillNoRadio.addEventListener("change", toggleWillDetails);
+const childrenSection = document.getElementById("children_related_questions");
 
-const representativeCountryYes = document.getElementById('representative_is_established_in_netherlands_yes');
-const representativeCountryNo = document.getElementById('representative_is_established_in_netherlands_no');
+document.getElementById("has_children_yes")
+  .addEventListener("change", () => toggleSection(childrenSection, true));
 
-const nlFields = document.getElementById('nl_fields');
-const foreignFields = document.getElementById('foreign_fields');
+document.getElementById("has_children_no")
+  .addEventListener("change", () => toggleSection(childrenSection, false));
 
-function toggleRepresentativeFields() {
-    if (representativeCountryYes.checked) {
-        nlFields.style.display = "block";
-        foreignFields.style.display = "none";
-    } else if (representativeCountryNo.checked) {
-        nlFields.style.display = "none";
-        foreignFields.style.display = "block";
-    }
-}
-representativeCountryYes.addEventListener("change", toggleRepresentativeFields);
-representativeCountryNo.addEventListener("change", toggleRepresentativeFields);
+const willSection = document.getElementById("will_details_section");
 
+document.getElementById("has_will_yes")
+  .addEventListener("change", () => toggleSection(willSection, true));
 
-let identificatienummerc1 = document.getElementById("choice1");
-let identificatienummerc2 = document.getElementById("choice2");
-let identificatienummerc3 = document.getElementById("choice3");
+document.getElementById("has_will_no")
+  .addEventListener("change", () => toggleSection(willSection, false));
 
-let bsn = document.getElementById("bsn_field");
-let becon = document.getElementById("becon_field");
-let notary = document.getElementById("notary_field");
+const bsnField = document.getElementById("bsn_field");
+const beconField = document.getElementById("becon_field");
+const notaryField = document.getElementById("notary_field");
 
-identificatienummerc1.onclick = function() {
-    bsn.style.display = "block";
-    becon.style.display = "none";
-    notary.style.display = "none";
-};
+document.getElementById("choice1")
+  .addEventListener("change", () => {
+    toggleSection(bsnField, true);
+    toggleSection(beconField, false);
+    toggleSection(notaryField, false);
+});
 
-identificatienummerc2.onclick = function() {
-    bsn.style.display = "none";
-    becon.style.display = "block";
-    notary.style.display = "none";
-};
+document.getElementById("choice2")
+  .addEventListener("change", () => {
+    toggleSection(bsnField, false);
+    toggleSection(beconField, true);
+    toggleSection(notaryField, false);
+});
 
-identificatienummerc3.onclick = function() {
-    bsn.style.display = "none";
-    becon.style.display = "none";
-    notary.style.display = "block";
-};
+document.getElementById("choice3")
+  .addEventListener("change", () => {
+    toggleSection(bsnField, false);
+    toggleSection(beconField, false);
+    toggleSection(notaryField, true);
+});
 
-// MARK: LANDCODE CODE
+const nlFields = document.getElementById("nl_fields");
+const foreignFields = document.getElementById("foreign_fields");
 
+document.getElementById("representative_is_established_in_netherlands_yes")
+  .addEventListener("change", () => {
+    toggleSection(nlFields, true);
+    toggleSection(foreignFields, false);
+});
+
+document.getElementById("representative_is_established_in_netherlands_no")
+  .addEventListener("change", () => {
+    toggleSection(nlFields, false);
+    toggleSection(foreignFields, true);
+});
+
+// Hulp van ChatGPT bij inklappen
+// Prompt: Ik loop tegen een klein probleempje, Voor een schoolopdracht maak ik een formulier. Ik heb in mijn formulier een aantal opties om vragen open of dicht te klappen.
+// Maar als required op een vraag blijft terwijl die dicht gaat blijft die error nogsteeds erop. Hier zie je mijn code:
+
+// Werkt helaas niet op Radio Buttons. Heb wel veel geprobeerd om dit werkend te krijgen.
+
+// MARK: Pattern 2 (LANDCODE CODE)
 const countries = [
   { code: "AFG", name: "Afghanistan" },
   { code: "ALA", name: "Åland" },
@@ -244,7 +291,6 @@ const countries = [
   { code: "ZWE", name: "Zimbabwe" },
 ];
 
-// datalist vullen
 const datalist = document.getElementById("countries");
 countries.forEach((c) => {
   const option = document.createElement("option");
@@ -255,7 +301,7 @@ countries.forEach((c) => {
 // mapping maken
 const map = Object.fromEntries(countries.map((c) => [c.name, c.code]));
 
-const input = document.getElementById("countryInput");
+const input = document.getElementById("representative_country_code");
 
 // zodra gebruiker kiest → tekst vervangen
 input.addEventListener("change", function () {
@@ -263,4 +309,27 @@ input.addEventListener("change", function () {
     input.value = map[input.value];
   }
 });
+// Hulp van Naoufal
 
+// MARK: Max Datum 
+
+function setMaxDateToday() {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    let mm = today.getMonth() + 1; // Maanden beginnen bij 0
+    let dd = today.getDate();
+
+    // Zorg dat maand en dag altijd 2 cijfers hebben
+    if (mm < 10) mm = '0' + mm;
+    if (dd < 10) dd = '0' + dd;
+
+    const maxDate = `${yyyy}-${mm}-${dd}`;
+
+    const dateInputs = document.querySelectorAll('input[type="date"]');
+    dateInputs.forEach(input => {
+        input.setAttribute('max', maxDate);
+    });
+}
+
+// Wacht tot de DOM geladen is
+document.addEventListener('DOMContentLoaded', setMaxDateToday);

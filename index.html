@@ -17,112 +17,142 @@
 
     <main>
 
-        <form>
+        <form novalidate>
             <fieldset>
                 <legend class="firstlegend">Vul hier de gegevens van de Overledene in.</legend>
                 <fieldset>
                     <legend>Persoongegevens van de Overledene</legend>
-                    <label for="initial_deceased">Voorletter(s): </label>
-                    <input type="text" name="initial_deceased" id="initial_deceased" required>
+                    <label for="initial_deceased">Voorletter(s):</label>
+                    <input type="text" name="initial_deceased" id="initial_deceased" required> 
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="infix_deceased">Tussen-voegsel(s): </label>
                     <input type="text" name="infix_deceased" id="infix_deceased">
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="lname_deceased">Achternaam: </label>
                     <input type="text" name="lname_deceased" id="lname_deceased" required>
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="bsn_deceased">Bsn overledene: </label>
-                    <input type="text" name="bsn_deceased" id="bsn_deceased" required>
+                    <input type="number" name="bsn_deceased" id="bsn_deceased" required>
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="dateofdeath">Overlijdensdatum: </label>
                     <input type="date" name="dateofdeath" id="dateofdeath" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
                 <fieldset>
                     <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                    <label>
-                        <input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_yes" value="yes" checked> Ja
-                    </label>
-                    <label>
-                        <input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_no" value="no"> Nee
-                    </label>
+
+                    <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_yes" value="yes" required> Ja</label>
+                    <label><input type="radio" name="married_or_registered_partner" id="married_or_registered_partner_no" value="no" required> Nee</label>
+
+                    <span class="error" aria-live="polite"></span>  
                 </fieldset>
 
-                <div id="partner_questions">
+                <div id="partner_questions" class="transitie">
 
                     <fieldset>
                         <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vastleggen in een notariële akte?</legend>
-                        <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" value="yes"> Ja</label>
+
+                        <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" value="yes" required> Ja</label>
                         <label><input type="radio" name="prenuptial_or_partnership_agreement_notarized" value="no"> Nee</label>
+
+                        <span class="error" aria-live="polite"></span>
+                    
                     </fieldset>
 
                     <fieldset>
                         <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                        <label><input type="radio" name="final_settlement_clause" value="yes"> Ja</label>
+
+                        <label><input type="radio" name="final_settlement_clause" value="yes" required> Ja</label>
                         <label><input type="radio" name="final_settlement_clause" value="no"> Nee</label>
+
+                        <span class="error" aria-live="polite"></span>
                     </fieldset>
 
                     <fieldset>
-                        <legend>Vul hier de gegevens in van de overledene.</legend>
-                        <label for="prenuptial_or_partnership_agreement_date">
-                            Datum huwelijkse of partnerschapsvoorwaarden:
-                        </label>
-                        <input type="date" name="prenuptial_or_partnership_agreement_date" id="prenuptial_or_partnership_agreement_date">
+                        <legend>Vul hier een datum in.</legend>
+
+                        <label for="prenuptial_or_partnership_agreement_date">Datum huwelijkse of partnerschapsvoorwaarden:</label>
+                        <input type="date" name="prenuptial_or_partnership_agreement_date" id="prenuptial_or_partnership_agreement_date" required>
+
+                        <span class="error" aria-live="polite"></span>
+                    </fieldset>
+
+                </div>
+
+                <fieldset>
+                    <legend>Had de overledene kinderen?</legend>
+
+                    <label><input type="radio" name="children" id="has_children_yes" value="yes" required> Ja</label>
+                    <label><input type="radio" name="children" id="has_children_no" value="no"> Nee</label>
+
+                    <span class="error" aria-live="polite"></span>
+                </fieldset>
+
+                <div id="children_related_questions" class="transitie">
+
+                    <fieldset>
+                        <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
+
+                        <label><input type="radio" name="has_predeceased_child" value="yes" required> Ja</label>
+                        <label><input type="radio" name="has_predeceased_child" value="no"> Nee</label>
+
+                        <span class="error" aria-live="polite"></span>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Had dit overleden kind zelf kinderen?</legend>
+
+                        <label><input type="radio" name="predeceased_child_has_children" value="yes" required> Ja</label>
+                        <label><input type="radio" name="predeceased_child_has_children" value="no"> Nee</label>
+
+                        <span class="error" aria-live="polite"></span>
                     </fieldset>
 
                 </div>
                 
                 <fieldset>
-                    <legend>Had de overledene kinderen?</legend>
-                    <label><input type="radio" name="children" id="has_children_yes" value="yes" checked> Ja</label>
-                    <label><input type="radio" name="children" id="has_children_no" value="no"> Nee</label>
+                    <legend>Had de overledene een testament?</legend>
+
+                    <label><input type="radio" name="has_will" id="has_will_yes" value="yes" required> Ja</label>
+                    <label><input type="radio" name="has_will" id="has_will_no" value="no"> Nee</label>
+
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <div id="children_related_questions">
+                <div id="will_details_section" class="transitie">
 
                     <fieldset>
-                        <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                        <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_yes" value="yes"> Ja</label>
-                        <label><input type="radio" name="has_predeceased_child" id="has_predeceased_child_no" value="no"> Nee</label>
-                    </fieldset>
 
-                    <fieldset>
-                        <legend>Had dit overleden kind zelf kinderen?</legend>
-                        <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_yes" value="yes"> Ja</label>
-                        <label><input type="radio" name="predeceased_child_has_children" id="predeceased_child_has_children_no" value="no"> Nee</label>
+                        <legend>Vul de gegevens in van de notaris die het testament heeft opgemaakt.</legend>
+
+                        <label for="notary_protocol_number">Protocolnummer notaris:</label>
+                        <input type="number" name="notary_protocol_number" id="notary_protocol_number" required>
+                        <span class="error" aria-live="polite"></span>
+
+                        <label for="notary_full_name">Voorletter(s), tussenvoegsel(s) en achternaam:</label>
+                        <input type="text" name="notary_full_name" id="notary_full_name" required>
+                        <span class="error" aria-live="polite"></span>
+
+                        <label for="notary_place_of_business">Vestigingsplaats:</label>
+                        <input type="text" name="notary_place_of_business" id="notary_place_of_business" required>
+                        <span class="error" aria-live="polite"></span>
+
+                        <label for="will_or_last_amendment_date">Datum van het testament of van de laatste wijziging:</label>
+                        <input type="date" name="will_or_last_amendment_date" id="will_or_last_amendment_date" required>
+                        <span class="error" aria-live="polite"></span>
+
+                        <label for="bsn_deceased2">Vul hier de BSN van de overledene in:</label>
+                        <input type="text" name="bsn_deceased2" id="bsn_deceased2" required>
+                        <span class="error" aria-live="polite"></span>
+
                     </fieldset>
 
                 </div>
-
-            <fieldset>
-                <legend>Had de overledene een testament?</legend>
-                <label><input type="radio" name="has_will" id="has_will_yes" value="yes" checked> Ja</label>
-                <label><input type="radio" name="has_will" id="has_will_no" value="no"> Nee</label>
-            </fieldset>
-
-            <div id="will_details_section">
-
-                <fieldset>
-                    <legend>Vul de gegevens in van de notaris die het testament heeft opgemaakt.</legend>
-
-                    <label for="notary_protocol_number">Protocolnummer notaris: </label>
-                    <input type="text" name="notary_protocol_number" id="notary_protocol_number" required>
-
-                    <label for="notary_full_name">Voorletter(s), tussenvoegsel(s) en achternaam: </label>
-                    <input type="text" name="notary_full_name" id="notary_full_name" required>
-
-                    <label for="notary_place_of_business">Vestigingsplaats: </label>
-                    <input type="text" name="notary_place_of_business" id="notary_place_of_business" required>
-
-                    <label for="will_or_last_amendment_date">Datum van het testament of van de laatste wijziging: </label>
-                    <input type="date" name="will_or_last_amendment_date" id="will_or_last_amendment_date" required>
-
-                    <label for="bsn_deceased2">Vul hier de BSN van de overledene in :</label>
-                    <input type="text" name="bsn_deceased2" id="bsn_deceased2" required>
-
-                </fieldset>
-
-            </div>
 
             </fieldset>
 
@@ -131,67 +161,82 @@
                 <legend class="firstlegend">Vul hier de gegevens van de Gemachtigde in</legend>
                 <fieldset>
                     <legend>Kies 1 van de 3 Identificatienummers</legend>
-                    <label><input type="radio" name="representative_choice" id="choice1" value="1"> BSN/RSIN Nummer</label>
+                    <label><input type="radio" name="representative_choice" id="choice1" value="1" required> BSN/RSIN Nummer</label>
                     <label><input type="radio" name="representative_choice" id="choice2" value="2"> Beconnummer Adviseur</label>
                     <label><input type="radio" name="representative_choice" id="choice3" value="3"> Protocolnummer Notaris</label>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <fieldset id="bsn_field" style="display:none;">
+                <fieldset id="bsn_field">
                     <label for="representative_bsn_or_rsin">BSN/RSIN Gemachtigde:</label>
-                    <input type="text" id="representative_bsn_or_rsin">
+                    <input type="number" id="representative_bsn_or_rsin" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <fieldset id="becon_field" style="display:none;">
+                <fieldset id="becon_field">
                     <label for="advisor_becon_number">Beconnummer adviseur:</label>
-                    <input type="text" id="advisor_becon_number">
+                    <input type="number" id="advisor_becon_number" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <fieldset id="notary_field" style="display:none;">
-                    <label for="notary_protocol_number">Protocolnummer notaris:</label>
-                    <input type="text" id="notary_protocol_number">
+                <fieldset id="notary_field">
+                    <label for="notary_protocol_number2">Protocolnummer notaris:</label>
+                    <input type="number" id="notary_protocol_number2" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
                 <fieldset>
                     <legend>Persoongegevens van de Gemachtigde</legend>
                     <label for="representative_full_name">Voorletter(s), tussenvoegsel(s) en achternaam gemachtigde: </label>
                     <input type="text" name="representative_full_name" id="representative_full_name" required>
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="representative_organization_name">Naam instelling (bijvoorbeeld een notariskantoor): </label>
-                    <input type="text" name="representative_organization_name" id="representative_organization_name">
+                    <input type="text" name="representative_organization_name" id="representative_organization_name" required>
+                    <span class="error" aria-live="polite"></span>
                     
                     <label for="representative_phone_number">Telefoonnummer Gemachtigde: </label>
                     <input type="text" name="representative_phone_number" id="representative_phone_number" required>
+                    <span class="error" aria-live="polite"></span>
                     
-                    <label for="representative_email_address">E-Mail Adres Gemachtigde: </label>
-                    <input type="text" name="representative_email_address" id="representative_email_address" required>
+                    <label for="representative_email_address">E-mail adres Gemachtigde: </label>
+                    <input type="email" name="representative_email_address" id="representative_email_address" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
                 
                 <fieldset>
                     <legend>Is de Gemachtigde Gevestigd in Nederland?</legend>
-                    <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_yes" value="yes" checked> Ja </label>
+                    <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_yes" value="yes" required> Ja </label>
                     <label><input type="radio" name="representative_is_established_in_netherlands" id="representative_is_established_in_netherlands_no" value="no"> Nee</label>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <fieldset id="nl_fields" style="display:block;">
+                <fieldset id="nl_fields">
                     <legend>Adres in Nederland.</legend>
                     <label for="representative_address_nl">Straat, huisnummer en toevoeging: </label>
-                    <input type="text" name="representative_address_nl" id="representative_address_nl">
+                    <input type="text" name="representative_address_nl" id="representative_address_nl" required>
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="representative_postal_code_and_city_nl">Postcode en woonplaats van Gemachtigde: </label>
-                    <input type="text" name="representative_postal_code_and_city_nl" id="representative_postal_code_and_city_nl">
+                    <input type="text" name="representative_postal_code_and_city_nl" id="representative_postal_code_and_city_nl" required>
+                    <span class="error" aria-live="polite"></span>
                 </fieldset>
 
-                <fieldset id="foreign_fields" style="display:none;">
+                <fieldset id="foreign_fields">
                     <legend>Adres in het Buitenland.</legend>
                     <label for="representative_address_foreign">Straat, huisnummer en toevoeging: </label>
-                    <input type="text" name="representative_address_foreign" id="representative_address_foreign">
+                    <input type="text" name="representative_address_foreign" id="representative_address_foreign" required>
+                    <span class="error" aria-live="polite"></span>
 
                     <label for="representative_postal_code_and_city_foreign">Postcode en woonplaats van Gemachtigde: </label>
-                    <input type="text" name="representative_postal_code_and_city_foreign" id="representative_postal_code_and_city_foreign">
+                    <input type="text" name="representative_postal_code_and_city_foreign" id="representative_postal_code_and_city_foreign" required>
+                    <span class="error" aria-live="polite"></span>
 
-                    <label for="representative_country_code">Landcode: </label>
-                    <input type="text" name="representative_country_code" id="countryInput">
-
+                    <label for="representative_country_code">Land (Landcode): </label>
+                    <input type="text" name="representative_country_code" id="representative_country_code" required>
+                    <span class="error" aria-live="polite"></span>
+                    <datalist id="countries"></datalist>
+                    
                 </fieldset>
 
             </fieldset>
