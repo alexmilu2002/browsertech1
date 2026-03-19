@@ -33,6 +33,18 @@
 <h3>Wat ga ik morgen doen?</h3>
 <p>De volgende keer wil kijken over welke pattronen er allemaal zijn, en welke ik wil gaan doen. Ook wil ik misschien alvast eentje toepassen. Ik was ook nog niet helemaal klaar met de huisstijl overnemen naar mijn project, dus dat wil ik ook gaan doen.</p>
 
+<h2>Weekly Checkout 1</h2>
+<h3>Wat heb je deze week gedaan?</h3>
+<p>Deze week heb ik me vooral verdiept in de opdracht door research te doen en een artikel voor de Weekly Geek te lezen. Tijdens de les heb ik mijn kennis getest met een quiz en ben ik gestart met mijn project. Ik heb 2 pagina's uitgekozen en de content daarvan uitgewerkt. Verder heb ik eenbeetje onderzoek gedaan naar zowel technische dingetjes (MDN), en de huisstijl van de NS.</p>
+
+<h3>Wat heb je deze week geleerd?</h3>
+<p>Ik heb kennis opgedaan over de opdracht en meer inzicht gekregen over hoe belangrijk toegankelijkheid eigenlijk is, vooral bij formulieren. Daarnaast heb ik geleerd hoe je formulieren beter kunt structureren en heb ik mijn kennis over HTML, fieldsets en webstandaarden uitgebreid.</p>
+
+<h3>Wat ga je volgende week doen?</h3>
+<p>Volgende week ga ik verder onderzoeken welke patterns geschikt zijn voor mijn project en beginnen met het toepassen daarvan. Daarnaast werk ik verder aan de uitwerking van de stijl.</p>
+
+<img src="./images/Week 1 BT.png" alt="Screenshot van Voortgang Week1">
+
 <h2>Dag 3 (02/03/2025) Maandag</h2>
 
 <h3>Wat heb ik gedaan vandaag?</h3>
@@ -67,6 +79,20 @@
 
 <h3>Wat ga ik morgen doen?</h3>
 <p>De volgende keer komt Rijk van Zanten langs, ik ben benieuwd wat zijn verhaal is. Verder wil ik verder met de pattronen en wil ik kijken of ik een begin kan maken aan validatie.</p>
+
+<h2>Weekly Checkout 2</h2>
+<h3>Wat heb je deze week gedaan?</h3>
+<p>Deze week ben ik aan de slag gegaan met het toepassen van patterns in mijn formulier. Ik heb verschillende interacties verbeterd zodat het formulier gebruiksvriendelijker wordt. Daarnaast heb ik gewerkt aan mijn eerste pattern met landcodes, hierbij heb ik hulp gekregen van Naoufal, en tweede pattern met velden in en uit klappen. Dit heb ik uitgeoefent uit een optie met 2 velden, en 3 velden. Verder heb ik ook gewerkt aan de vormgeving en huisstijl, om zo mijn formulier op die van de NS te laten lijken. </p>
+
+<h3>Wat heb je deze week geleerd?</h3>
+<p>Ik heb geleerd welke patterns je kunt gebruiken in formulieren en hoe deze kunnen zorgen voor toegankelijkheid. Ik heb geleerd hoe ik ervoor zorg dat als de gebruiker een land intypt, dat dan de Landcode wordt verstuurd. Verder heb ik geleerd hoe ik met JS de velden in en uit kan klappen. Ook heb ik meer inzicht gekregen in hoe je omgaat met form-structuur, zoals fieldsets en legends, en heb ik ook geleerd dat je bijvoorbeeld een fieldset in een fieldset kunt doen. </p>
+
+<h3>Wat ga je volgende week doen?</h3>
+<p>Ik ga verder met het verbeteren en toepassen van patterns, en wil beginnen met validatie in mijn formulier. Ook werk ik verder aan de vormgeving en de uitwerking van mijn project.</p>
+
+<img src="./images/Week 2 BT1.png" alt="Screenshot van Voortgang Week2">
+<img src="./images/Week 2 BT2.png" alt="Screenshot van Voortgang Week2">
+<img src="./images/Week 2 BT3.png" alt="Screenshot van Voortgang Week2">
 
 <h2>Dag 5 (09/03/2025) Maandag</h2>
 
@@ -104,7 +130,19 @@
 <h3>Wat ga ik morgen doen?</h3>
 <p>Morgen is de weekly check-out. Dan wil ik kijken wat voor feedback Vasilis geeft, en daarop ga ik het inspelen.</p>
 
-<h2>Dag 7 (16/03/2025) Dinsdag</h2>
+<h2>Weekly Checkout 3</h2>
+<h3>Wat heb je deze week gedaan?</h3>
+<p>Deze week heb ik verder gewerkt aan mijn formulier, met focus op validatie. Ik heb een workshop gevolgd over validatie en ben begonnen met het implementeren van zowel standaard als custom validatie. Custom Valideren vond ik lastig, omdat ik niet zo goed ben in javascript. Tenslotte heb ik mijn formulier verder verbeterd met patterns en styling, zo had ik eerst een aantal vragen checked. Terwijl je eigenlijk geen vragen ingevuld wilt hebben voor gebruikers. Ook heb ik een kijkje genomen naar hoe ik velden die verborgen zijn niet meer een error geven zodat je het formulier kunt verzenden, alleen houd ik dat voor volgende week.</p>
+
+<h3>Wat heb je deze week geleerd?</h3>
+<p>Ik heb geleerd hoe form-validatie werkt, zowel met standaard browserfunctionaliteiten als met custom JS-oplossingen. Ook heb ik inzicht gekregen in hoe je feedback aan gebruikers beter kunt vormgeven en wanneer je validatie laat zien. Daarnaast heb ik geleerd dat eenvoud vaak beter werkt dan onnodig complexe oplossingen (Mede door het Edgy filmpje bij de Weekly Geek).</p>
+
+<h3>Wat ga je volgende week doen?</h3>
+<p>Ik ga verder met het verbeteren en uitbreiden van mijn validatie, zodat deze op meerdere velden en inputtypes goed werkt. Verder had Vasilis mij feedback gegeven bij het gesprek vandaag, namelijk dat mijn velden plots open gaan, dan heb je eigenlijk niet door wat er is gebeurd. Dus wil ik een animatie toevoegen aan het openen van de velden.</p>
+
+<img src="./images/Week 3 BT.png" alt="Screenshot van Voortgang Week3">
+
+<h2>Dag 7 (16/03/2025) Maandag</h2>
 
 <h3>Wat heb ik gedaan vandaag?</h3>
 <p>Vandaag was ik een half uurtje later doordat ik naar de tandarts moest, dus heb ik helaas de uitleg gemist. Vorige week vrijdag heb ik van Vasilis feedback gekregen op mijn formulier. Ik had allemaal kleine feedback punten, maar er was 1 groot punt die mijn aandacht trok. Hij gaf aan dat mijn inklap functie heel direct is en dat je daardoor niet door hebt wat er nou gebeurt. Nu heb ik een transitie toegevoegd, daardoor zie je dat er oprecht iets inklapt of uitklapt. Eerst had ik mijn inklap functie met javascript. Maar toen ging ik kijken wat er ging gebeuren met mijn site als js het niet meer doer, en de uitkomst was ik niet zo blij mee. Ik heb besloten om het om te gooien naar HTML en CSS only. Door middel een methode die ik eerder heb geleerd bij deze minor is dit mogelijk geweest, namelijk has:. Verder ben ik bezig geweest met de validity. Ik ben wel verder gekomen, alleen snap ik niet waarom het niet werkt op mijn radio buttons. Hier wil ik Vasilis meer over vragen morgen. Morgen is eigenlijk de laatste dag, dan wil ik dit afmaken en misschien nog de elf proof, of een max datum doen als er tijd over is.</p>
@@ -133,12 +171,21 @@
 <p>Puntjes op de i: 1 uur</p>
 <p>Check-Out: 1 uur</p>
 
-
 <h3>Wat heb ik geleerd?<h3>
 <p>Ik heb geleerd hoe ik een maximale datum instel, en hoe je required op ingeklapte velden weghaalt. Ook heb ik geleerd om beter met console log je code kunt checken</p>
 
 <h3>Wat ga ik morgen doen?</h3>
 <p>Morgen wil ik het hele bestand checken op fouten. En thuis misschien kijken of ik het probleem toch kan oplossen. </p>
+
+<h2>Weekly Checkout 4</h2>
+<h3>Wat heb je deze week gedaan?</h3>
+<p>Komt na het Eindgesprek</p>
+
+<h3>Wat heb je deze week geleerd?</h3>
+<p>Komt na het Eindgesprek</p>
+
+<h3>Wat ga je volgende week doen?</h3>
+<p>Komt na het Eindgesprek</p>
 
 <h2>Bronnen:</h2>
 <p>https://developer.mozilla.org/en-US/play?uuid=04d8f1308b73ea2debcaf9b964f78c1b07992f4d&state=rVbvb9s2EP1XbuqGxZljuSsGtLKTD10DtECzDUu%2BDFWBUuLJ4kKRKnmyrQX%2B3wce5V%2BNuxZDDRi2yLvHd%2B8eST0kNTU6yZJ5ZV0Dxi6FVlIQXuUGYN7yD8BciwI1VNZd5kkjlM6TYQZg7lthrv7QKDwCGkIHwgCGKBBSOvQezrN5ymG7JGXajoD6Fi%2FzBCMkKLmDByMa3D85%2FNgphxIaZTSaBdWXefI8TyA95gGlFt4HSOesyxMQTokLrZYBq7VaEebJ1RGZecrFxYLTWPG86IisubrtikbRPB0eczNPg05XuUnGSel9kiWFlT08hKTKGsrgKTbghfEXHp2qZmFipSTVGfw8nbZrHmiFlMosMpjyYyPcQpkMpiA6srPcbHKTmxbOI65UvtWiz6DQtrzfTrOA744FfB8TLlZY3Cu6EG2LwglTYgbGGuTFTgwecHw6nf7AYYV1El0GT9s1eKuVhCfP%2BHPMeMgOpV9UolG6z0CZGp2i2W7Cq38wgxeMHLHXYYwViOtcFHa9LSw9h7taeVAebOfAU68xOA%2BoRlCGDQqVQi09nKeDENl24mFP%2FqK02roMnrx4MZ1Oo9SFKO8XznZG7marSkopj2TNKlt2%2FhjTdqSV2Yv2KdfALnK1FRNnB0KD3osFRqqTOPZwSvAjT3wi3fMhZqC8qhXh58o5LDbK4IRUnQ%2F2msIv7Tp8v6oRke1ElKSWGEnvSU6eYRMDk3Hyd9gIaQp3NToE4RAaYXpYid4DWWhVeQ8CXv1%2BA8ZKnAGHrRAWSKwbnz2KPOoKhJE8Fi1t0hTiUVHY9RiEhxVqHX5Z77DjUWODhkAZskGasg7QK6U1tFqUGNEOmzHJTWmNp7juJUhbdgFiskC6jmj%2BZX8nFr%2BJBs%2FyJITlyejd9D3rFnPjAXcy%2BWX%2FRp5tj67R7CjjmokcpH3s0PW3qLEk687y5Anj%2FsS1TYZTbMTrcv5ESHm9RENvlSc0GFJYoDwZwxmGmRFcXsV2pSlci7IGUk2UofPo%2BND14G2DVCuzGAe5yhrLe1BViBoyWZxhn4WW8l6YROOoCs4iHR5V1Mc%2Fo7gu578xUIYrgbjbyvOtcNgGWCqvCo3jYd242C5f%2Bbgk83PY2OXpVobwvbQTZQy613c3b%2BES8iRPZgHrT%2FSD1UprKLjFxiUHmEcofI2E9jPK0IZPoJbKd0KDJ0F4Am8DqD0eClLttfAU%2FLlVZAy%2BtquBn3NYUhyPqWGOWZ2NeFtvcrOJjggtOmUIz9fWZxyxFTu0N6ghlBmUBilIsNwaCRTBgLNr%2BXdf7HkV0pQ3PxLjDFdXKFS0rbOtU0GsoxaeLpLh7mo0AaZ1XMaed%2BVsAwUqswAfJooeynCl6TDCJgnxQ1fD38kA8Qor0Wl6rGRnSlLWHPKIdZ22eoc3yntlFqNHDY42Dk3GpqV%2BN7vVIhahtV0Fsl9wM%2BGafh0sG5z4l%2B3AIMpwrJ5%2B15rkyezAfifoh%2F1%2Fo3wjqKw%2FS19aDF3cOuTRMt%2B2rOtQCkpgZblAvjgK%2FD%2FlWXtbW0cnSgv%2B5rva2tBoR9%2Byig%2FXzNPXttOSqROEl2KC7x8ixUaZt%2FzuuoGyFk6UhM7PoLdd7CXKXSgLMYlvupvJh61bhy18O5xA4X0j8DzYW5oN998nGcQrnZXcfO05sj9D8NRm4n2UjBOqscEkS6Rw98nmXw%3D%3D&srcPrefix=%2Fen-US%2Fdocs%2FLearn_web_development%2FExtensions%2FForms%2FForm_validation%2F</p>

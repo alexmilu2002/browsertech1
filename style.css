@@ -127,7 +127,7 @@ span.error {
   color: red;
   font-size: 0.9em;
   visibility: hidden;     /* Verberg standaard */
-  display: block;         /* Zorg dat het op een nieuwe regel staat */
+  display: block;         /* nieuwe regel */
   margin-top: -1em;
   margin-bottom: 1em;
 

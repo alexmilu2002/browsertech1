@@ -312,7 +312,6 @@ input.addEventListener("change", function () {
 // Hulp van Naoufal
 
 // MARK: Max Datum 
-
 function setMaxDateToday() {
     const today = new Date();
     const yyyy = today.getFullYear();
